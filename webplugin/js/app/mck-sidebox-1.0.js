@@ -720,9 +720,9 @@ var userOverride = {
                     return;
                 }
                 IS_SOCKET_CONNECTED = false;
-                if (navigator.onLine) {
+                // if (navigator.onLine) {
                     window.Applozic.ALSocket.reconnect();
-                }
+                // }
                 SOCKET_RECONNECT_FAIL_COUNT++;
                 SOCKET_RECONNECT_FAIL_COUNT > 2 && kommunicateCommons.modifyClassList(
                     { id: ['km-socket-disconnect-msg'] },
